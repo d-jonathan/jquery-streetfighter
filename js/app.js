@@ -24,6 +24,11 @@ $(document).ready(function () {
 		$('.ryu-throwing').hide();
 		$('.ryu-ready').show();
 	});
+	$(document).keydown(function ( event ) {
+		if ( event.which == 88 ) {
+			ryuCool();
+		}
+	});
 
 });
 
@@ -32,3 +37,11 @@ function playHadouken () {
 	$('#hadouken-sound')[0].load();
 	$('#hadouken-sound')[0].play();
 }
+
+function ryuCool () {
+	//alert('x key is down');
+	$('.ryu-still').hide();
+	$('.ryu-ready').hide();
+	$('.ryu-cool').show();
+}
+
