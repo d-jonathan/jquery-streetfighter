@@ -2,14 +2,17 @@ $(document).ready(function () {
 	$('.ryu').mouseenter(function() {
 		$('.ryu-still').hide();
 		$('.ryu-ready').show();
+		$('.ryu-cool').hide();
 	})
 	.mouseleave(function () {
 		$('.ryu-ready').hide();
 		$('.ryu-still').show();
+		$('.ryu-cool').hide();
 	})
 	.mousedown(function () {
 		playHadouken();
 		$('.ryu-ready').hide();
+		$('.ryu-cool').hide();
 		$('.ryu-throwing').show();
 		$('.hadouken').finish().show().animate(
 			{'left': '1059px'},
